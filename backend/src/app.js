@@ -7,14 +7,12 @@ const app = express();
 //middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: ["https://forever-frontend-1.onrender.com/", "http://localhost:5174"],
     credentials: true,
   })
 );
 
-app.get("/", (req, res) => {
-  res.send("api working");
-});
+
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
