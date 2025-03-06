@@ -7,7 +7,7 @@ const app = express();
 //middleware
 app.use(
   cors({
-    origin: ["https://forever-frontend-1.onrender.com/", "http://localhost:5174"],
+    origin: ["https://forever-frontend-1.onrender.com", "http://localhost:5174"],
     credentials: true,
   })
 );
