@@ -7,7 +7,7 @@ const app = express();
 //middleware
 app.use(
   cors({
-    origin: ["https://forever-frontend-1.onrender.com", "https://full-stack-ecommerce-website-hmrq.onrender.com"],
+    origin: "*",
     credentials: true,
   })
 );
