@@ -8,7 +8,10 @@ const app = express();
 app.use(
   cors({
     origin: "*",
-    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // Allow cookies, authorization headers
+    maxAge: 86400, // Optional: cache preflight request for 24 hours
   })
 );
 
